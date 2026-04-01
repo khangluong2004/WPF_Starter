@@ -7,6 +7,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="350" d:DesignWidth="500"
       Title="ExpenseIt - View Expense">
+    <Page.Resources>
+        <local:CurrencyConverter x:Key="CurrencyConverter"/>
+    </Page.Resources>
 
     <Grid>
         <Grid.Background>
@@ -25,7 +28,10 @@
                 <Label Content="{Binding Path=ExpenseType}"/>
             </DataTemplate>
             <DataTemplate x:Key="amountItemTemplate">
-                <Label Content="{Binding Path=ExpenseAmount}"/>
+                <Label Content="{Binding Path=ExpenseAmount, 
+                    Converter={StaticResource CurrencyConverter},
+                    ConverterParameter=$,
+                    ConverterCulture=en-US}"/>
             </DataTemplate>
         </Grid.Resources>
 

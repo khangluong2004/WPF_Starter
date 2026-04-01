@@ -1,0 +1,23 @@
+---
+description: Core coding and commit standards
+alwaysApply: true
+---
+
+# Coding Standards
+
+- Keep responses concise and actionable.
+- Never make automatic code changes; provide suggestions only.
+- Show code snippets in every technical answer.
+- Prefer clear naming, small methods, and minimal side effects.
+- For C# and WPF examples, use explicit, readable patterns.
+- Always use CamelCase.
+- Prefer C# concise features, such as automatic getter/setter and event callback.
+
+## Example Suggestion Style
+
+```csharp
+// Suggestion only (do not auto-apply)
+public static bool IsValidAmount(decimal amount)
+{
+    return amount >= 0m;
+}
